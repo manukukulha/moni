@@ -1,0 +1,42 @@
+@import '~lightbox2/dist/css/lightbox.min';
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700|Satisfy');
+
+*{
+	font-family: 'Quicksand', sans-serif;
+}
+.small{
+	font-size: .8rem;
+}
+.bold{
+	font-weight: 700;
+}
+.italic{
+	font-family: 'Satisfy', cursive;
+}
+.icon{
+	font-size: 55px;
+	margin: 30px;
+}
+
+/*Helpers*/
+.overflow{
+	overflow-y: hidden;
+}
+.justify{
+	text-align: justify;
+}
+/*Fondos*/
+.hero{
+	background: url('/img/slider1.jpg') no-repeat top center;
+	background-attachment: contain;
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+}
+/*Medias*/
+
+@media screen and (min-width: 600) {
+	
+}
