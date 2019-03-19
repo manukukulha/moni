@@ -9,7 +9,7 @@ use App\Post;
 use App\Category;
 use App\User;
 use App\Work;
-use App;
+use App\CategoryWork;
 
 class PageController extends Controller
 {
@@ -39,8 +39,19 @@ class PageController extends Controller
     }
 
     public function work(){
+        $categories = CategoryWork::orderBy('name', 'ASC')->get();
         $works = Work::orderBy('id', 'DESC')->paginate(12);
-        return view('web.portfolio', compact('works'));
+        return view('web.portfolio', compact('works', 'categories'));
+    }
+
+    public function categoryWork($slug)
+    {   
+        $categories = CategoryWork::orderBy('name', 'ASC')->get();
+        $category = CategoryWork::where('slug', $slug)->pluck('id')->first();
+        $works = Work::where('category_id', $category)
+                ->orderBy('id', 'DESC')->paginate(12);
+
+        return view('web.portfolio', compact('works', 'categories'));
     }
 
     public function category($slug)

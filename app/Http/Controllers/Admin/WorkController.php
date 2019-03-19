@@ -50,7 +50,7 @@ class WorkController extends Controller
             $work->save();
         }
 
-        return redirect()->route('work.edit', $work->id)->with('info', 'Post created succesfully');
+        return redirect()->route('works.index')->with('info', 'Work created succesfully');
     }
 
     /**
@@ -94,8 +94,8 @@ class WorkController extends Controller
             $work->file =  $request->file('file')->store('public');
             $work->save();
         }
-        return redirect()->route('works.edit', $work->id)
-            ->with('info', 'Post updated succesfully');
+        return redirect()->route('works.index')
+            ->with('info', 'Work updated succesfully');
     }
 
     /**

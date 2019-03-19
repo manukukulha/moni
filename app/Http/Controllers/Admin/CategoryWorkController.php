@@ -40,7 +40,7 @@ class CategoryWorkController extends Controller
     {
         $category = CategoryWork::create($request->all());
 
-        return redirect()->route('categories.index')->with('info', 'Category created succesfully');
+        return redirect()->route('category-works.index')->with('info', 'Category created succesfully');
     }
 
     /**

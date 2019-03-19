@@ -22,6 +22,7 @@ Route::get('blog', 'Web\PageController@blog')->name('blog');
 Route::get('work', 'Web\PageController@work')->name('work');
 Route::get('post/{slug}', 'Web\PageController@post')->name('post');
 Route::get('category/{slug}', 'Web\PageController@category')->name('category');
+Route::get('category-work/{slug}', 'Web\PageController@categoryWork')->name('category-work');
 Route::get('tag/{slug}', 'Web\PageController@tag')->name('tag');
 Route::get('user/{slug}', 'Web\PageController@user')->name('user');
 
